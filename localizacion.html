@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <!-- InstanceBegin template="Templates/base.dwt.html" codeOutsideHTMLIsLocked="false" -->
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <!-- InstanceBeginEditable name="doctitle" -->
+    <title>Construcci&oacute;n y reformas</title>
+    <!-- InstanceEndEditable -->
+    <%if 1=2 then%>
+    <link href="arch/estilos.css" rel="stylesheet" type="text/css" />
+    <%end if%>
+    <link
+      href="arch/estilos.css?r=<%randomize : Response.Write Cint(rnd(100)*1000)%>"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- InstanceBeginEditable name="head" -->
+    <script
+      src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAA60g3vspq2zy4QOiXwO3LkRRNInigxdYwJHoKJYC3osT4CgkgThSGPopbSYjwBh2xCu69I9PCT5H33A"
+      type="text/javascript"
+    ></script>
+    <script src="inc/js.js" type="text/javascript"></script>
+    <script language="javascript" type="text/javascript">
+      //window.onload=function(){loadMap()};
+    </script>
+    <!-- InstanceEndEditable -->
+  </head>
+  <body>
+    <div id="sup"></div>
+    <div id="cuerpo">
+      <!--#include virtual="head.html" -->
+      <!-- InstanceBeginEditable name="Cuerpo" -->
+      <!--#include virtual="nav-prin-seccion.html" -->
+      <br class="clearfloat" />
+      <div id="col-nav">
+        <div id="nav-seccion">
+          <div>
+            <ul>
+              <li><a href="#">Mapa de localizaci&oacute;n</a></li>
+              <li><a href="#">&iquest;C&oacute;mo llegar?</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="bloque">
+          <h3>Ven a ver nuestra exposici&oacute;n</h3>
+          <div>
+            <p>
+              Una magn&iacute;fica exposici&oacute;n donde encontrar&aacute; lo
+              que est&aacute; buscando.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="contenido-doble">
+        <h2>Localizaci&oacute;n</h2>
+        <div id="map">
+          <img src="arch/mapa-estatico.jpg" width="730" height="350" />
+        </div>
+      </div>
+      <!-- InstanceEndEditable -->
+      <!--#include virtual="foot.html" -->
+    </div>
+  </body>
+  <!-- InstanceEnd -->
+</html>

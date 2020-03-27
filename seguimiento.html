@@ -1,0 +1,96 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- InstanceBegin template="Templates/base.dwt.html" codeOutsideHTMLIsLocked="false" -->
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<!-- InstanceBeginEditable name="doctitle" -->
+	<title>Construcci&oacute;n y reformas</title>
+	<!-- InstanceEndEditable -->
+	<%if 1=2 then%>
+	<link href="arch/estilos.css" rel="stylesheet" type="text/css" /><%end if%>
+	<link href="arch/estilos.css?r=<%randomize : Response.Write Cint(rnd(100)*1000)%>" rel="stylesheet"
+		type="text/css" />
+	<!-- InstanceBeginEditable name="head" -->
+	<!-- InstanceEndEditable -->
+</head>
+
+<body>
+	<div id="sup"></div>
+	<div id="cuerpo">
+		<!--#include virtual="head.html" -->
+		<!-- InstanceBeginEditable name="Cuerpo" -->
+		<!--#include virtual="nav-prin-seccion.html" -->
+		<br class="clearfloat" />
+		<div id="col-nav">
+			<%select case ""& Request.QueryString("e")
+	case "procecon"%>
+			<!--#include virtual="procecon/menu.html" -->
+			<%case "nazasur"%>
+			<!--#include virtual="nazasur/menu.html" -->
+			<%end select%>
+			<!--#include virtual="inc_bloque_equipo_humano.html" -->
+		</div>
+		<div id="contenido-doble">
+			<h2>Seguimiento de tu Vivienda</h2>
+			<p> Desde esta secci&oacute;n puedes ver el estado de tu vivienda a medida que se van realizando
+				avances.<br />
+				Localice su vivienda en el siguiente listado y pulse para ver <strong>todos los detalles disponibles y
+					actualizados</strong>.</p>
+			<div class="tabla">
+				<div>
+					<table width="100%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<th>Obra</th>
+							<th>&nbsp;</th>
+							<th>Localizaci&oacute;n</th>
+							<th>Estado actual</th>
+							<th>% ejecutado</th>
+							<th>Fotos</th>
+						</tr>
+						<tr class="fila-a">
+							<td><a href="index.html?e=<%=Request.QueryString("e")%>&amp;o=rosas">Rosas</a></td>
+							<td>8&ordf;A</td>
+							<td>Jard&iacute;n</td>
+							<td>Estructura</td>
+							<td>75 %</td>
+							<td>-</td>
+						</tr>
+						<tr class="fila-b">
+							<td><a href="index.html?e=<%=Request.QueryString("e")%>&amp;o=margaritas">Margaritas</a>
+							</td>
+							<td>1&ordm;B</td>
+							<td>Campo</td>
+							<td>Estructura</td>
+							<td>80 %</td>
+							<td>-</td>
+						</tr>
+						<tr class="fila-a">
+							<td><a href="index.html?e=<%=Request.QueryString("e")%>&amp;o=tulipanes">Tulipanes</a></td>
+							<td>5&ordm;C</td>
+							<td>Camino</td>
+							<td>Paredes</td>
+							<td>25 %</td>
+							<td>-</td>
+						</tr>
+						<tr class="fila-b">
+							<td><a href="index.html?e=<%=Request.QueryString("e")%>&amp;o=amapolas">Amapolas</a></td>
+							<td>3&ordm;B</td>
+							<td>Valle</td>
+							<td>Estructura</td>
+							<td>50 %</td>
+							<td>-</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+
+		</div>
+		<!-- InstanceEndEditable -->
+		<!--#include virtual="foot.html" -->
+	</div>
+</body>
+<!-- InstanceEnd -->
+
+</html>

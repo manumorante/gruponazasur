@@ -1,0 +1,17 @@
+<%if 1=2 then%><link href="arch/estilos.css" type="text/css" rel="stylesheet" /><%end if%>
+<%
+function activo(pClave,pNormal)
+	Dim url
+	Dim clave, normal
+	url = lcase(""&Request.ServerVariables("URL"))
+	clave = lcase(""&pClave)
+	normal = ""&pNormal
+	if inStr(url,clave)>0 then
+		activo = " class="&chr(34)&"activo"&chr(34)
+	elseif normal <> "" then
+		activo = " class="&chr(34)&normal&chr(34)
+	end if	
+end function
+%>
+<h1 class="logo"><a href=""><img src="arch/nazasur-logo.jpg" alt="Nazasur" width="159" height="74" /></a></h1>
+<p id="nav-sup"><a<%=activo("inicio","")%> href="">Inicio</a>|<a<%=activo("/la-empresa/","")%> href="la-empresa/historia.html">La empresa</a>|<a<%=activo("contacto","")%> href="contacto.html">Contacto</a>|<a<%=activo("localizacion","")%> href="localizacion.html">Localizaci&oacute;n</a></p>
